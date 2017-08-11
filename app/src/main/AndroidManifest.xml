@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <application
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,6 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data android:name="AA_DB_NAME" android:value="MyDB"/>
+        <meta-data android:name="AA_DB_VERSION" android:value="1"/>
+        <meta-data android:name="AA_MODELS" android:value="rts.com.np.gps.Models.UserData"/>
+
+        <service android:name=".Service.GpsService"/>
     </application>
 
 </manifest>
